@@ -19,8 +19,7 @@ public class UserFactory {
     public static UserDto positiveUser() {
         UserDto user = UserDto.builder()
                 .username(faker.internet().emailAddress())
-                .password(PropertiesReader.getProperty(
-                        "base.properties", "sign_up_pass"))
+                .password("Qwerty123!")
                 .build();
         return user;
     }
