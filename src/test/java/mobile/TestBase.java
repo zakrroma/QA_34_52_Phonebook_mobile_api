@@ -9,7 +9,7 @@ public class TestBase {
     protected static AppiumDriver driver;
 
     @BeforeMethod
-    public void setup() {
+    public void setUp() {
         driver = AppiumConfig.createAppiumDriver();
     }
 
