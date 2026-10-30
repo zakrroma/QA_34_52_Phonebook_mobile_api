@@ -18,6 +18,12 @@ public class ContactsScreen extends BaseScreen{
     @AndroidFindBy(xpath = "//android.widget.Toast[@text='Contact was added!']")
     WebElement popupContactWasAdded;
 
+    @AndroidFindBy(xpath = "//android.widget.Toast[@text='Contact was updated!']")
+    WebElement popupContactWasUpdated;
+
+    @AndroidFindBy(id = "android:id/button1")
+    WebElement btnConfirmDelete;
+
     public boolean checkTextNoContact(String text) {
         return isTextInElementPresent(textNoContact, text);
     }
@@ -32,5 +38,18 @@ public class ContactsScreen extends BaseScreen{
 
     public boolean checkTextInPopupContactWasAdded(String text) {
         return isTextInElementPresent(popupContactWasAdded, text);
+    }
+
+    public boolean checkTextInPopupContactWasUpdated(String text) {
+        return isTextInElementPresent(popupContactWasUpdated, text);
+    }
+
+    public void goToEditContact() {
+        swipe(width/10*9, height/6, width/10, height/6);
+    }
+
+    public void deleteContact() {
+        swipe(width/10, height/6, width/10*9, height/6);
+        clickWait(btnConfirmDelete);
     }
 }

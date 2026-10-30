@@ -11,33 +11,33 @@ public class AddContactScreen extends BaseScreen {
     }
 
     @AndroidFindBy(id = "com.sheygam.contactapp:id/inputName")
-    WebElement fieldName;
+    WebElement inputName;
 
     @AndroidFindBy(id = "com.sheygam.contactapp:id/inputLastName")
-    WebElement fieldLastName;
+    WebElement inputLastName;
 
     @AndroidFindBy(id = "com.sheygam.contactapp:id/inputEmail")
-    WebElement fieldEmail;
+    WebElement inputEmail;
 
     @AndroidFindBy(id = "com.sheygam.contactapp:id/inputPhone")
-    WebElement fieldPhone;
+    WebElement inputPhone;
 
     @AndroidFindBy(id = "com.sheygam.contactapp:id/inputAddress")
-    WebElement fieldAddress;
+    WebElement inputAddress;
 
     @AndroidFindBy(id = "com.sheygam.contactapp:id/inputDesc")
-    WebElement fieldDescription;
+    WebElement inputDescription;
 
     @AndroidFindBy(id = "com.sheygam.contactapp:id/createBtn")
     WebElement btnCreate;
 
     public void fillAddContactForm(ContactDto contact) {
-        fieldName.sendKeys(contact.getName());
-        fieldLastName.sendKeys(contact.getLastName());
-        fieldEmail.sendKeys(contact.getEmail());
-        fieldPhone.sendKeys(contact.getPhone());
-        fieldAddress.sendKeys(contact.getAddress());
-        fieldDescription.sendKeys(contact.getDescription());
+        inputName.sendKeys(contact.getName());
+        inputLastName.sendKeys(contact.getLastName());
+        inputEmail.sendKeys(contact.getEmail());
+        inputPhone.sendKeys(contact.getPhone());
+        inputAddress.sendKeys(contact.getAddress());
+        inputDescription.sendKeys(contact.getDescription());
     }
 
     public void tapBtnCreate() {
